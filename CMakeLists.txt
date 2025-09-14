@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.15)
 set(CMAKE_TOOLCHAIN_FILE ${CMAKE_CURRENT_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake)
 project(CoFrance)
 
@@ -23,8 +23,8 @@ if (DEBUG)
 endif()
 
 # Add SDK include directory
+add_subdirectory(third-party/NeoRadarSDK)
 include_directories(
-    ${CMAKE_SOURCE_DIR}/sdk
     ${CMAKE_SOURCE_DIR}/src
 )
 
@@ -46,6 +46,7 @@ add_library(${PROJECT_NAME} SHARED ${SOURCES})
 
 # Link dependencies
 target_link_libraries(${PROJECT_NAME} PRIVATE 
+    NeoRadarSDK::NeoRadarSDK
     httplib::httplib
     nlohmann_json::nlohmann_json
     OpenSSL::SSL

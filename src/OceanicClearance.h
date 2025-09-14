@@ -5,7 +5,7 @@
 #include <regex>
 #include <thread>
 #include <nlohmann/json.hpp>
-#include "SDK.h"
+#include <NeoRadarSDK/SDK.h>
 
 namespace OceanicClearance
 {

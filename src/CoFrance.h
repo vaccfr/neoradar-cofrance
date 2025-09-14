@@ -1,6 +1,6 @@
 // CoFrance.h
 #pragma once
-#include "SDK.h"
+#include <NeoRadarSDK/SDK.h>
 #include "GateAssigner.h"
 #include "OceanicClearance.h"
 

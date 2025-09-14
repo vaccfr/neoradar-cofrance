@@ -4,7 +4,7 @@
 #include <httplib.h>
 #include <thread>
 #include <toml.hpp>
-#include "SDK.h"
+#include <NeoRadarSDK/SDK.h>
 
 
 namespace GateAssigner
